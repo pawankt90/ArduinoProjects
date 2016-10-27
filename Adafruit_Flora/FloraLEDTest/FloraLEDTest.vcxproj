@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
     <RootNamespace>$safeprojectname$</RootNamespace>
-    <ProjectName>FloraTest</ProjectName>
+    <ProjectName>FloraLEDTest</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -47,8 +47,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Users\Pawan\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.9\libraries;C:\Users\Pawan\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Users\Pawan\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.9\variants\flora;C:\Users\Pawan\Documents\Arduino\Adafruit_Flora\FloraTest;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Users\Pawan\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.9\variants\flora;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\xt4x0ti3.jj4\Micro Platforms\default\debuggers\VM_DBG;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Users\Pawan\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.9\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\xt4x0ti3.jj4\Micro Platforms\default\debuggers;C:\Users\Pawan\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>C:\Users\Pawan\Documents\Arduino\FloraTest\__vm\.FloraTest.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>C:\Users\pawant\Documents\Arduino\libraries\Neopatterns;C:\Users\pawant\Documents\Arduino\libraries\Adafruit_NeoPixel;C:\Users\pawant\Documents\Arduino\libraries\Neopatterns\utility;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Users\pawant\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.9\libraries;C:\Users\pawant\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Users\pawant\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.9\variants\flora;C:\Users\pawant\Documents\Arduino\FloraLEDTest;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>C:\Users\pawant\Documents\Arduino\FloraLEDTest\__vm\.FloraLEDTest.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega32u4__;__AVR_ATmega32U4__;_VMDEBUG=1;F_CPU=8000000L;ARDUINO=106012;ARDUINO_AVR_FLORA8;ARDUINO_ARCH_AVR;USB_VID=0x239A;USB_PID=0x8004;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -74,12 +74,12 @@
     <ProjectCapability Include="VisualMicro" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FloraTest.ino">
+    <None Include="FloraLEDTest.ino">
       <FileType>CppCode</FileType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="__vm\.FloraTest.vsarduino.h" />
+    <ClInclude Include="__vm\.FloraLEDTest.vsarduino.h" />
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
@@ -89,7 +89,7 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties arduino.upload.port="COM5" />
+      <UserProperties arduino.upload.port="COM6" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
