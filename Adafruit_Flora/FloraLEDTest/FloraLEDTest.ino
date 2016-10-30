@@ -1,24 +1,19 @@
 #include <NeoPatterns.h>
 
-int FloraLEDPin = 8;
-uint32_t delayTime = 500;
+int FloraLEDPin = 6;
+uint32_t delayTime = 10;
 
-NeoPatterns neoStrip = NeoPatterns(1, FloraLEDPin, NEO_GRB + NEO_KHZ800);
+NeoPatterns neoStrip = NeoPatterns(8, FloraLEDPin, NEO_GRB + NEO_KHZ800);
 
 void setup()
 {
+	Serial.begin(115200);
     neoStrip.begin();
     neoStrip.show();
-
 }
 
 void loop()
-{
-    neoStrip.ConfigureColorWipe(GetKnownColorValue(RED), delayTime);
-    neoStrip.PerformPattern();
-    neoStrip.ConfigureColorWipe(GetKnownColorValue(GREEN), delayTime);
-    neoStrip.PerformPattern();
-    neoStrip.ConfigureColorWipe(GetKnownColorValue(BLUE), delayTime);
-    neoStrip.PerformPattern();
+{ 
 
+	
 }
