@@ -29,6 +29,8 @@ void displaySensorDetails(void)
 
 void setup(void)
 {
+	neoStrip.begin();
+	neoStrip.show();
 	Serial.begin(115200);
 	Serial.println("Accelerometer Test"); Serial.println("");
 
@@ -39,6 +41,8 @@ void setup(void)
 		Serial.println("Ooops, no LSM303 detected ... Check your wiring!");
 		while (1);
 	}
+
+	neoStrip.ColorSet(GetKnownColorValue(RED));
 
 	/* Display some basic information on this sensor */
 	displaySensorDetails();
@@ -52,9 +56,9 @@ void loop(void)
 	accel.getEvent(&event);
 
 	/* Display the results (acceleration is measured in m/s^2) */
-	Serial.print("X: "); Serial.print(event.acceleration.x); Serial.print("  ");
-	Serial.print("Y: "); Serial.print(event.acceleration.y); Serial.print("  ");
-	Serial.print("Z: "); Serial.print(event.acceleration.z); Serial.print("  "); Serial.println("m/s^2 ");
+	//Serial.print("X: "); Serial.print(event.acceleration.x); Serial.print("  ");
+	//Serial.print("Y: "); Serial.print(event.acceleration.y); Serial.print("  ");
+	//Serial.print("Z: "); Serial.print(event.acceleration.z); Serial.print("  "); Serial.println("m/s^2 ");
 
 	/* Note: You can also get the raw (non unified values) for */
 	/* the last data sample as follows. The .getEvent call populates */
@@ -63,8 +67,20 @@ void loop(void)
 	//Serial.print("Y Raw: "); Serial.print(accel.raw.y); Serial.print("  ");
 	//Serial.print("Z Raw: "); Serial.print(accel.raw.z); Serial.println("");
 
+	uint8_t b = map(accel.raw.x, -1050, 1050, 0, 255);
+	uint8_t r = map(accel.raw.y, -1050, 1050, 0, 255);
+	uint8_t g = map(accel.raw.z, -1050, 1050, 0, 255);
+
+	Serial.print("Red="); Serial.print(r); Serial.print(" "); \
+		Serial.print("Green="); Serial.print(g); Serial.print(" "); \
+		Serial.print("Blue="); Serial.print(b); Serial.println();
+
+	uint32_t color = ((uint32_t)r << 16) | ((uint32_t)g << 8) | b;
+
+	neoStrip.ColorSet(color);
+
 	/* Delay before the next sample */
-	delay(2000);
+	delay(500);
 }
 
 /*
