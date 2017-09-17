@@ -1,1 +1,9 @@
 libraries/
+GemmaTest/Release/
+GemmaTest/__vm/Compile.vmps.xml
+GemmaTest/__vm/
+Adafruit_Flora/FloraLEDTest/Debug/
+*.suo
+Adafruit_Flora/FloraLEDTest/__vm/.FloraLEDTest.vsarduino.h
+Adafruit_Flora/FloraLEDTest/__vm/
+Adafruit_Flora/FloraLEDTest/.vs/
