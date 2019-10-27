@@ -1,9 +1,9 @@
 #include <NeoPatterns.h>
 
-int FloraLEDPin = 6;
+int FloraLEDPin = 8;
 uint32_t delayTime = 300;
 
-NeoPatterns neoStrip = NeoPatterns(8, FloraLEDPin, NEO_GRB + NEO_KHZ800);
+NeoPatterns neoStrip = NeoPatterns(128, 8, FloraLEDPin, NEO_GRB + NEO_KHZ800);
 
 void setup()
 {
