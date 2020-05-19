@@ -2,13 +2,13 @@
 #include <Neopatterns.h>
 
 int GemmaLEDPin = 1;
-NeoPatterns neostrip = NeoPatterns(64, 6, GemmaLEDPin, NEO_GRB + NEO_KHZ800);
+NeoPatterns neostrip = NeoPatterns(64, 8, GemmaLEDPin, NEO_GRB + NEO_KHZ800);
 
 void setup() {
 	// put your setup code here, to run once:
 	neostrip.begin();
 	neostrip.show();
-	neostrip.ConfigureRainbowCycle(50);
+	neostrip.ConfigureRainbowCycle(25);
 }
 
 void loop() {
